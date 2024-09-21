@@ -42,7 +42,7 @@ body {
 
 .header {
     width: 100%;
-    background: #333333;
+    background: #344a71;
 }
 
 .footer {
@@ -57,7 +57,7 @@ body {
     text-align: left;
     background: #eaeaea;
     padding-right: 280px;
-    box-shadow: 0 0 15px #333333;
+    box-shadow: 0 0 15px #3f51b5;
 }
 
 .aside-1 {
@@ -69,7 +69,7 @@ body {
 .aside-2 {
     background:	#ffffff;
     width: 120px;
-    box-shadow: 0 0 15px #060a23;
+    box-shadow: 0 0 15px #3f51b5;
 }
 
 @media all and (min-width: 600px) {
@@ -92,7 +92,7 @@ body {
     list-style: none;
     margin: 0 auto;
 
-    background: #333333;
+    background: #344a71;
 
     display: -webkit-box;
     display: -moz-box;
@@ -189,7 +189,7 @@ input{
 
 /* Select */
 select{
-    background-color: #090d14;
+    background-color: #637ba5;
     border-radius: 10px;
     border: 1px solid #ffffff;
     padding: 10px;
@@ -207,7 +207,9 @@ label{
     font-size: 14pt;
 }
 
-
+h1 {
+    font-size: 25pt;
+}
 
 ul, li, a {
     list-style:none;
@@ -296,7 +298,7 @@ ul.navigation li a:hover {
 .navigation-logo {
     height: 80px;
     width: 80px;
-    
+    border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 

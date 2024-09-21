@@ -15,11 +15,12 @@
 
             <a name="home"></a>
             <div class="navigation-container">
-                <a href="../index.html">
-                    <img class="navigation-logo" style="width: 1000px; height: 200px; margin-right: 40px;" src="../../img/final.png" alt="Andra Hotel Booking">
-                </a>
+                <div class="logo-container">
+                    <img class="navigation-logo" src="https://th.bing.com/th?id=OLC.QBBzz/J+VRD4kA480x360&rs=1&pid=ImgDetMain" alt="">
+                    <div class="nav-text">Andra Mahasabha</div>
+                </div>
                 <ul class="navigation">
-                    <li><a class="bs" href="../index.html">HOME</a></li>
+                    <li><a class="bs" href="#home">HOME</a></li>
                     <li><a class="bs" href="room.html">ROOMS AND SUITES</a></li>
                     <li><a class="bs" href="contact.html">CONTACT US</a></li>
                     <li><a class="bs" href="about.html">ABOUT</a></li>
@@ -34,16 +35,21 @@
                 <form action="" method="post" id="book_reservation" >
                     <div class="form-all">
                         <ul>
-                         <!-- HEADER -->
-                            <h1 class="form-header" style="color: black">
-                               Hotel Booking
-                            </h1>
+                            <!-- HEADER -->
+                            <br>
+                            <li>
+                                <h1 class="form-header" style="color: black">
+                                    Hotel Booking
+                                </h1>
+                            </li>
+                            <br>
+
                             <!-- NAME AND LASTNAME -->
                             <li>
                                 <label>Name</label>
                                 <div class="name">
                                     <input type="text" id="firstname" placeholder="First Name" required style="margin-top: 3px;">
-                                    <input type="text" id="lastname" placeholder="Last Name" required style="margin-top: 4px;">
+                                    <input type="text" id="lastname" placeholder="Last Name" required style="margin-top: 10px;">
                                 </div>
                             </li>
                             <br>
@@ -53,14 +59,7 @@
                                 <label>Email</label>
                                 <div>
                                     <input type="text" id="email" required placeholder="Email Address" size="30">
-                                    <label>Phone No.</label>
-                                <div>
-                                    <input type="text" id="Phone No." required placeholder="phone No." size="10">
                                 </div>
-                                </div>
-                            </li>
-                           
-                                
                             </li>
                             <br>
 
@@ -238,7 +237,6 @@
                                 </div>
                             </li>
                             <br>
-                            
 
                             <li>
                                 <label>Member of Andra Mahasabha</label>
@@ -284,14 +282,11 @@
                                     <textarea class="form-textarea" cols="35" rows="4" data-component="textarea" placeholder="Additional Information"></textarea>
                                 </div>
                             </li>
-                            <form action="/submit" method="post" id="book_reservation">
-                                <!-- form fields here -->
-                                <button type="submit">Submit</button>
-                            </form>
-            
-
-                            
                             <br>
+
+                            <li>
+                                <button style="font-size: 15pt; border-color: #3e61a0" class="send">Submit</button>
+                            </li>
                         </ul>
                     </div>
                 </form>
@@ -383,7 +378,6 @@ document.getElementById('book_reservation').addEventListener('submit', function(
         email: document.getElementById('email').value,
         room: document.getElementById('room').value,
         guest: document.getElementById('guest').value,
-        children: document.getElementById('children').value,
         day: document.getElementById('day').value,
         month: document.getElementById('month').value,
         year: document.getElementById('year').value,
@@ -394,9 +388,9 @@ document.getElementById('book_reservation').addEventListener('submit', function(
         departure_year: document.getElementById('departure_year').value,
         departure_hour: document.getElementById('departure_hour').value,
         timeperiodDeparture: document.getElementById('timeperiodDeparture').value,
-        freePickUp: document.getElementById('freePickUp').value,
         membership: document.querySelector('input[name="membership"]:checked') ? document.querySelector('input[name="membership"]:checked').value : '',
-        passportNumber: document.querySelector('input[placeholder="A11163131"]').value,
+        passportNumber: idNumberInput.value, 
+        phoneNumber: phoneNumberInput.value,
         specialRequest: document.querySelector('.form-textarea').value
     };
     
@@ -404,8 +398,7 @@ document.getElementById('book_reservation').addEventListener('submit', function(
     
     alert('Data stored successfully!');
 });
-
-        </script>
+</script>
     </div>
 </body>
 </html>
